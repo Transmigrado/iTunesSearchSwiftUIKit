@@ -15,11 +15,24 @@ target 'iTunesSearchSwiftUIKit' do
   target 'iTunesSearchSwiftUIKitTests' do
     inherit! :search_paths
     # Pods for testing
+    use_frameworks!
+     pod 'Alamofire', '~> 5.0.0-rc.3'
+     pod 'Quick'
+     pod 'Nimble'
+     pod 'Swinject'
+     pod 'SwinjectStoryboard'
   end
 
   target 'iTunesSearchSwiftUIKitUITests' do
     inherit! :search_paths
     # Pods for testing
+    use_frameworks!
+    pod 'Alamofire', '~> 5.0.0-rc.3'
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Swinject'
+    pod 'lottie-ios'
+    pod 'SwiftAudio', '~> 0.11.2'
   end
 
 end
