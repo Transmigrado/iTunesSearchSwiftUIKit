@@ -54,6 +54,16 @@ class TrackListModelTest: QuickSpec {
             }
         }
         
+        describe("change properties correctly") {
+            it("reset page and track when change searchText"){
+                let model : TrackListModel = container.resolve(from: .trackListModel)
+                model.searchText = "Billie Eilish"
+                expect(model.tracks.count).to(equal(1))
+                
+                model.searchText = "Coldplay"
+                expect(model.tracks.count).to(equal(1))
+            }
+        }
         
     }
 }
