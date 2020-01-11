@@ -15,6 +15,7 @@ class TrackListModel : ListModel
     var page = 0
     var searchText = "" {
         didSet {
+            tracks = []
             retrieve(term: searchText)
         }
     }
