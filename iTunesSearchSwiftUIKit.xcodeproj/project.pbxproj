@@ -17,6 +17,8 @@
 		4F9C416D23CA46B2005DEB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C416B23CA46B2005DEB98 /* LaunchScreen.storyboard */; };
 		4F9C417823CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C417723CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests.swift */; };
 		4F9C418323CA46B3005DEB98 /* iTunesSearchSwiftUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C418223CA46B3005DEB98 /* iTunesSearchSwiftUIKitUITests.swift */; };
+		4F9C419223CA5BF8005DEB98 /* TrackSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C419123CA5BF8005DEB98 /* TrackSearchViewController.swift */; };
+		4F9C419523CA5C33005DEB98 /* TrackSearchViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C419423CA5C33005DEB98 /* TrackSearchViewControllerTest.swift */; };
 		5686A434B5FF1A6FC08548D5 /* Pods_iTunesSearchSwiftUIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		4F9C417E23CA46B3005DEB98 /* iTunesSearchSwiftUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchSwiftUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9C418223CA46B3005DEB98 /* iTunesSearchSwiftUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchSwiftUIKitUITests.swift; sourceTree = "<group>"; };
 		4F9C418423CA46B3005DEB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F9C419123CA5BF8005DEB98 /* TrackSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchViewController.swift; sourceTree = "<group>"; };
+		4F9C419423CA5C33005DEB98 /* TrackSearchViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchViewControllerTest.swift; sourceTree = "<group>"; };
 		6F1C79D0D766D554FEA748CF /* Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKitUITests/Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A027157880F0860A2E6A3D81 /* Pods-iTunesSearchSwiftUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKit/Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchSwiftUIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,7 @@
 		4F9C417623CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				4F9C419323CA5C13005DEB98 /* Views */,
 				4F9C417723CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests.swift */,
 				4F9C417923CA46B3005DEB98 /* Info.plist */,
 			);
@@ -149,6 +154,15 @@
 			isa = PBXGroup;
 			children = (
 				4F9C416323CA46B1005DEB98 /* Main.storyboard */,
+				4F9C419123CA5BF8005DEB98 /* TrackSearchViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F9C419323CA5C13005DEB98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F9C419423CA5C33005DEB98 /* TrackSearchViewControllerTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -433,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9C419223CA5BF8005DEB98 /* TrackSearchViewController.swift in Sources */,
 				4F9C416823CA46B1005DEB98 /* iTunesSearchSwiftUIKit.xcdatamodeld in Sources */,
 				4F9C415E23CA46B1005DEB98 /* AppDelegate.swift in Sources */,
 				4F9C416023CA46B1005DEB98 /* SceneDelegate.swift in Sources */,
@@ -443,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9C419523CA5C33005DEB98 /* TrackSearchViewControllerTest.swift in Sources */,
 				4F9C417823CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
