@@ -13,9 +13,7 @@ import Nimble
 class TableOfContentsSpec: QuickSpec {
   override func spec() {
     describe("Track Search") {
-        it"refresh table when change model"){
-            
-        }
+        
     }
   }
 }
