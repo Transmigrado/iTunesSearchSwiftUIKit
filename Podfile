@@ -4,10 +4,9 @@
 target 'iTunesSearchSwiftUIKit' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for iTunesSearchSwiftUIKit
   pod 'Alamofire', '~> 5.0.0-rc.3'
-  pod 'Swinject'
+  pod 'Swinject', '2.6.2'
+  pod 'SwinjectStoryboard'
   pod 'lottie-ios'
   pod 'SwiftAudio', '~> 0.11.2'
 
@@ -17,7 +16,7 @@ target 'iTunesSearchSwiftUIKit' do
     use_frameworks!
      pod 'Alamofire', '~> 5.0.0-rc.3'
      pod 'Quick'
-     pod 'Swinject'
+     pod 'Swinject', '2.6.2'
      pod 'Nimble'
   end
 
@@ -27,7 +26,7 @@ target 'iTunesSearchSwiftUIKit' do
     use_frameworks!
     pod 'Alamofire', '~> 5.0.0-rc.3'
     pod 'Quick'
-    pod 'Swinject'
+    pod 'Swinject', '2.6.2'
     pod 'Nimble'
     pod 'lottie-ios'
     pod 'SwiftAudio', '~> 0.11.2'
