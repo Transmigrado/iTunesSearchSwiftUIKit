@@ -10,6 +10,10 @@ import Foundation
 
 class TrackListModel : ListModel
 {
+    
+    var tracks:[Track] = []
+    var searchText = "" 
+    
     let api : Fetch
     
     init(api : Fetch){
