@@ -15,7 +15,6 @@ class TrackListModelTest: QuickSpec {
     
     struct MockTrackAPi: Fetch {
             
-        
        func retrieve(urlString: String, handler: @escaping ((Page) -> Void)) {
         let file = """
              {
@@ -46,6 +45,14 @@ class TrackListModelTest: QuickSpec {
             container.register(from:.trackListModel, value: TrackListModel(api: MockTrackAPi()))
         }
         
+        describe("fetch when parameters change") {
+            it("fetch correctly data when searchText change"){
+               let model : TrackListModel = container.resolve(from: .trackListModel)
+               model.searchText = "Billie Eilish"
+               let firstItem = model.tracks.first
+               expect(firstItem?.artistName).to(equal("Californication"))
+            }
+        }
         
         
     }
