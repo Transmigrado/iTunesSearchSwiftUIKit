@@ -8,7 +8,6 @@ target 'iTunesSearchSwiftUIKit' do
   # Pods for iTunesSearchSwiftUIKit
   pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'Swinject'
-  pod 'SwinjectStoryboard'
   pod 'lottie-ios'
   pod 'SwiftAudio', '~> 0.11.2'
 
@@ -18,9 +17,8 @@ target 'iTunesSearchSwiftUIKit' do
     use_frameworks!
      pod 'Alamofire', '~> 5.0.0-rc.3'
      pod 'Quick'
-     pod 'Nimble'
      pod 'Swinject'
-     pod 'SwinjectStoryboard'
+     pod 'Nimble'
   end
 
   target 'iTunesSearchSwiftUIKitUITests' do
@@ -29,8 +27,8 @@ target 'iTunesSearchSwiftUIKit' do
     use_frameworks!
     pod 'Alamofire', '~> 5.0.0-rc.3'
     pod 'Quick'
-    pod 'Nimble'
     pod 'Swinject'
+    pod 'Nimble'
     pod 'lottie-ios'
     pod 'SwiftAudio', '~> 0.11.2'
   end
