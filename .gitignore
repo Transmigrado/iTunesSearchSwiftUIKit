@@ -36,9 +36,7 @@ playground.xcworkspace
 
 .build/
 
- Pods/
-*.xcworkspace
-
+Pods/
 
 Dependencies/
 .accio/
