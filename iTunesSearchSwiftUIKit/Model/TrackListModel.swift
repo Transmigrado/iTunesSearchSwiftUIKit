@@ -12,12 +12,23 @@ class TrackListModel : ListModel
 {
     
     var tracks:[Track] = []
-    var searchText = "" 
+    var page = 0
+    var searchText = "" {
+        didSet {
+            retrieve(term: searchText)
+        }
+    }
     
     let api : Fetch
     
     init(api : Fetch){
         self.api = api
+    }
+    
+    private func retrieve(term : String){
+        api.retrieve(urlString: "\(Constants.baseUrl)\(term)&offset=\(page * 20)") { response in
+            self.tracks.append(contentsOf: response.results)
+        }
     }
 }
    
