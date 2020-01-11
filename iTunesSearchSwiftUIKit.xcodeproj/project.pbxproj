@@ -288,6 +288,7 @@
 				4F9C415723CA46B1005DEB98 /* Frameworks */,
 				4F9C415823CA46B1005DEB98 /* Resources */,
 				4FB1AC5C78B5D1333E2891C2 /* [CP] Embed Pods Frameworks */,
+				4F9C41B923CA8B54005DEB98 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -447,6 +448,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iTunesSearchSwiftUIKitTests/Pods-iTunesSearchSwiftUIKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4F9C41B923CA8B54005DEB98 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		4FB1AC5C78B5D1333E2891C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -9,6 +9,7 @@ target 'iTunesSearchSwiftUIKit' do
   pod 'SwinjectStoryboard'
   pod 'lottie-ios'
   pod 'SwiftAudio', '~> 0.11.2'
+  pod 'SwiftLint'
 
   target 'iTunesSearchSwiftUIKitTests' do
     inherit! :search_paths
