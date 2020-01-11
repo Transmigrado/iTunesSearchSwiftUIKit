@@ -6,6 +6,11 @@ target 'iTunesSearchSwiftUIKit' do
   use_frameworks!
 
   # Pods for iTunesSearchSwiftUIKit
+  pod 'Alamofire', '~> 5.0.0-rc.3'
+  pod 'Swinject'
+  pod 'SwinjectStoryboard'
+  pod 'lottie-ios'
+  pod 'SwiftAudio', '~> 0.11.2'
 
   target 'iTunesSearchSwiftUIKitTests' do
     inherit! :search_paths
