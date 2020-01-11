@@ -10,6 +10,8 @@ import UIKit
 
 class TrackSearchViewController: UITableViewController {
 
+    var model : TrackListModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -17,6 +17,7 @@ target 'iTunesSearchSwiftUIKit' do
      pod 'Alamofire', '~> 5.0.0-rc.3'
      pod 'Quick'
      pod 'Swinject', '2.6.2'
+     pod 'SwinjectStoryboard'
      pod 'Nimble'
   end
 
@@ -27,6 +28,7 @@ target 'iTunesSearchSwiftUIKit' do
     pod 'Alamofire', '~> 5.0.0-rc.3'
     pod 'Quick'
     pod 'Swinject', '2.6.2'
+    pod 'SwinjectStoryboard'
     pod 'Nimble'
     pod 'lottie-ios'
     pod 'SwiftAudio', '~> 0.11.2'

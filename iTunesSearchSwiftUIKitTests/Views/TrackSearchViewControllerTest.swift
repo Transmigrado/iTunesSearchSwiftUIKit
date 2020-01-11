@@ -9,14 +9,12 @@
 
 import Quick
 import Nimble
-@testable import iTunesSearchSwiftUIKit
 
 class TableOfContentsSpec: QuickSpec {
   override func spec() {
     describe("Track Search") {
-        it("model is defined") {
-            let tableViewController = TrackSearchViewController()
-           
+        it"refresh table when change model"){
+            
         }
     }
   }

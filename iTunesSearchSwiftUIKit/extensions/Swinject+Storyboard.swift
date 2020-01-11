@@ -12,7 +12,7 @@ import SwinjectStoryboard
 extension SwinjectStoryboard {
     @objc class func setup() {
         defaultContainer.storyboardInitCompleted(TrackSearchViewController.self) { r, c in
-           
+            c.model = r.resolve(TrackListModel.self)
         }
        
     }
