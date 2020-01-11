@@ -10,6 +10,10 @@ import Foundation
 
 class TrackListModel : ListModel
 {
+    let api : Fetch
     
+    init(api : Fetch){
+        self.api = api
+    }
 }
    
