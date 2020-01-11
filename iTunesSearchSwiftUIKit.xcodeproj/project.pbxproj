@@ -21,6 +21,7 @@
 		4F9C419523CA5C33005DEB98 /* TrackSearchViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C419423CA5C33005DEB98 /* TrackSearchViewControllerTest.swift */; };
 		4F9C419823CA5F14005DEB98 /* TrackListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C419723CA5F14005DEB98 /* TrackListModel.swift */; };
 		4F9C419B23CA5F31005DEB98 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C419A23CA5F31005DEB98 /* ListModel.swift */; };
+		4F9C419E23CA647E005DEB98 /* Swinject+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C419D23CA647E005DEB98 /* Swinject+Storyboard.swift */; };
 		5686A434B5FF1A6FC08548D5 /* Pods_iTunesSearchSwiftUIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		4F9C419423CA5C33005DEB98 /* TrackSearchViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSearchViewControllerTest.swift; sourceTree = "<group>"; };
 		4F9C419723CA5F14005DEB98 /* TrackListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListModel.swift; sourceTree = "<group>"; };
 		4F9C419A23CA5F31005DEB98 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		4F9C419D23CA647E005DEB98 /* Swinject+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swinject+Storyboard.swift"; sourceTree = "<group>"; };
 		6F1C79D0D766D554FEA748CF /* Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKitUITests/Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A027157880F0860A2E6A3D81 /* Pods-iTunesSearchSwiftUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKit/Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchSwiftUIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 		4F9C415C23CA46B1005DEB98 /* iTunesSearchSwiftUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4F9C419C23CA6471005DEB98 /* extensions */,
 				4F9C419623CA5EC4005DEB98 /* Model */,
 				4F9C419023CA5B12005DEB98 /* Views */,
 				4F9C415D23CA46B1005DEB98 /* AppDelegate.swift */,
@@ -187,6 +190,14 @@
 				4F9C419A23CA5F31005DEB98 /* ListModel.swift */,
 			);
 			path = protocols;
+			sourceTree = "<group>";
+		};
+		4F9C419C23CA6471005DEB98 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4F9C419D23CA647E005DEB98 /* Swinject+Storyboard.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		9C5910B0E95D58A210EE7800 /* Frameworks */ = {
@@ -471,6 +482,7 @@
 			files = (
 				4F9C419823CA5F14005DEB98 /* TrackListModel.swift in Sources */,
 				4F9C419223CA5BF8005DEB98 /* TrackSearchViewController.swift in Sources */,
+				4F9C419E23CA647E005DEB98 /* Swinject+Storyboard.swift in Sources */,
 				4F9C416823CA46B1005DEB98 /* iTunesSearchSwiftUIKit.xcdatamodeld in Sources */,
 				4F9C419B23CA5F31005DEB98 /* ListModel.swift in Sources */,
 				4F9C415E23CA46B1005DEB98 /* AppDelegate.swift in Sources */,
