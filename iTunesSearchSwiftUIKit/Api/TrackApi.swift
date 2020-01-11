@@ -18,22 +18,20 @@ class TrackApi: Fetch {
             request?.cancel()
         }
 
-        request = AF.request(URL(string: urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)!)
+        let url = URL(string:
+            urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)!
+        request = AF.request(url)
             .responseJSON { response in
-
                 switch response.result {
-                    case .success:
-                      do {
-                        let data = try JSONDecoder().decode(Page.self, from: response.data!)
-                        handler(data)
-                      } catch let error {
-                         debugPrint(error)
-                      }
-                    case .failure: break
-
+                case .success:
+                  do {
+                    let data = try JSONDecoder().decode(Page.self, from: response.data!)
+                    handler(data)
+                  } catch let error {
+                     debugPrint(error)
+                  }
+                case .failure: break
                 }
-
             }
-
     }
 }
