@@ -6,17 +6,13 @@
 //  Copyright © 2020 Jorge Acosta. All rights reserved.
 //
 
-
 import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     @objc class func setup() {
-        
         defaultContainer.register(from: .trackListModel, value: TrackListModel(api: TrackApi()))
-        
-        defaultContainer.storyboardInitCompleted(TrackSearchViewController.self) { r, c in
-            c.model = r.resolve(TrackListModel.self)
+        defaultContainer.storyboardInitCompleted(TrackSearchViewController.self) { resolver, controller in
+            controller.model = resolver.resolve(TrackListModel.self)
         }
-       
     }
 }

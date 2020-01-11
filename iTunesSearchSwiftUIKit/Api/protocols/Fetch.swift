@@ -6,9 +6,6 @@
 //  Copyright © 2020 Jorge Acosta. All rights reserved.
 //
 
-
 protocol Fetch {
-    func retrieve(urlString: String, handler: @escaping ((Page)->Void))
+    func retrieve(urlString: String, handler: @escaping ((Page) -> Void))
 }
-
-

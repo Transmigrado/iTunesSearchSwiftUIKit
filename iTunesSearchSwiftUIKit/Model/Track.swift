@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct Track : Identifiable, Decodable {
-    
+struct Track: Identifiable, Decodable {
+
     var id = UUID()
     var wrapperType = ""
     var kind = ""
@@ -41,7 +41,7 @@ struct Track : Identifiable, Decodable {
     var country = ""
     var currency = ""
     var primaryGenreName = ""
-    
+
     private enum CodingKeys: String, CodingKey {
         case wrapperType
         case kind
@@ -73,7 +73,6 @@ struct Track : Identifiable, Decodable {
         case country
         case currency
         case primaryGenreName
- 
+
     }
 }
-

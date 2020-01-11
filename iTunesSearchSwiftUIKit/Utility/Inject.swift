@@ -7,21 +7,20 @@
 //
 
 import Foundation
-
-
 import Swinject
 
-enum InjectName:String {
+enum InjectName: String {
     case trackListModel
 }
 
 extension Container {
     func resolve<R>(from: InjectName) -> R {
-        let r:Inject<R> = resolve(InjectContainer.self, name: from.rawValue) as! Inject<R>
-        return r.value
+
+        let resolver: Inject<R> =  (resolve(InjectContainer.self, name: from.rawValue) as? Inject<R>)!
+        return resolver.value
     }
 
-    func register<T>(from: InjectName, value:T){
+    func register<T>(from: InjectName, value: T) {
         register(InjectContainer.self, name: from.rawValue) {_ in Inject<T>(value: value)}
     }
 }
@@ -29,9 +28,9 @@ extension Container {
 protocol InjectContainer {
 }
 
-struct Inject<T>:InjectContainer{
+struct Inject<T>: InjectContainer {
     var value: T
-    init(value:T) {
+    init(value: T) {
         self.value = value
     }
 }

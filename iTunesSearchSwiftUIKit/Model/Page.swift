@@ -11,7 +11,7 @@ import Foundation
 struct Page: Decodable {
 
    let resultCount: Int
-   let results:[Track]
+   let results: [Track]
 
    enum CodingKeys: String, CodingKey {
        case resultCount

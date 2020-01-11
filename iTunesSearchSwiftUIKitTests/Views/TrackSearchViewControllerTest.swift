@@ -6,14 +6,13 @@
 //  Copyright © 2020 Jorge Acosta. All rights reserved.
 //
 
-
 import Quick
 import Nimble
 
 class TableOfContentsSpec: QuickSpec {
   override func spec() {
     describe("Track Search") {
-        
+
     }
   }
 }

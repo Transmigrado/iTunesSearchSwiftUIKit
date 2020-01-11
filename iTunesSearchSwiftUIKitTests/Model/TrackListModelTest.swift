@@ -12,9 +12,7 @@ import Swinject
 @testable import iTunesSearchSwiftUIKit
 
 class TrackListModelTest: QuickSpec {
-    
     struct MockTrackAPi: Fetch {
-            
        func retrieve(urlString: String, handler: @escaping ((Page) -> Void)) {
         let file = """
              {
@@ -29,50 +27,46 @@ class TrackListModelTest: QuickSpec {
                let data = try JSONDecoder().decode(Page.self, from: file.data(using: .utf8)!)
                handler(data)
            } catch {
-            
            }
-         
-        
-           
        }
     }
-    
+
      override func spec() {
-        
+
         var container: Container!
         beforeEach {
             container = Container()
-            container.register(from:.trackListModel, value: TrackListModel(api: MockTrackAPi()))
+            container.register(from: .trackListModel, value: TrackListModel(api: MockTrackAPi()))
         }
-        
+
         describe("fetch when parameters change") {
-            it("fetch correctly data when searchText change"){
-               let model : TrackListModel = container.resolve(from: .trackListModel)
+            it("fetch correctly data when searchText change") {
+               let model: TrackListModel = container.resolve(from: .trackListModel)
                model.searchText = "Billie Eilish"
                let firstItem = model.tracks.first
                expect(firstItem?.artistName).to(equal("Californication"))
             }
         }
-        
+
         describe("change properties correctly") {
-            it("reset tracks when change searchText"){
-                let model : TrackListModel = container.resolve(from: .trackListModel)
+            it("reset tracks when change searchText") {
+                let model: TrackListModel = container.resolve(from: .trackListModel)
                 model.searchText = "Billie Eilish"
                 expect(model.tracks.count).to(equal(1))
-                
+
                 model.searchText = "Coldplay"
                 expect(model.tracks.count).to(equal(1))
             }
-            
-            it("reset page when change searchText"){
-                let model : TrackListModel = container.resolve(from: .trackListModel)
+
+            it("reset page when change searchText") {
+                let model: TrackListModel = container.resolve(from: .trackListModel)
                 model.searchText = "Billie Eilish"
                 model.page = 1
-                
+
                 model.searchText = "Coldplay"
                 expect(model.page).to(equal(0))
             }
         }
-        
+
     }
 }
