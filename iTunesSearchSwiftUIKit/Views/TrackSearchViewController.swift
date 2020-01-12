@@ -8,19 +8,23 @@
 
 import UIKit
 
-class TrackSearchViewController: UITableViewController {
+class TrackSearchViewController: UIViewController {
 
+    @IBOutlet var tableView : UITableView?
+    
     var model: TrackListModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         bindModel()
+        model?.searchText = "Coldplay"
     }
     func bindModel() {
         model?.$tracks.receive(on: DispatchQueue.main)
                         .sink { tracks in
-                            self.tableView.reloadData()
+                            self.tableView?.reloadData()
                         }
     }
+    /*
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,4 +39,5 @@ class TrackSearchViewController: UITableViewController {
 
         return cell
     }
+    */
 }
