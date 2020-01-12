@@ -29,6 +29,8 @@
 		4F9C41AB23CA6D62005DEB98 /* TrackListModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41AA23CA6D62005DEB98 /* TrackListModelTest.swift */; };
 		4F9C41AF23CA6E34005DEB98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41AD23CA6E34005DEB98 /* Constants.swift */; };
 		4F9C41B223CA6E76005DEB98 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41B123CA6E76005DEB98 /* Inject.swift */; };
+		4F9C41BD23CA9CB2005DEB98 /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41BC23CA9CB2005DEB98 /* TrackListViewModel.swift */; };
+		4F9C41BF23CA9CDB005DEB98 /* TrackListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41BE23CA9CDB005DEB98 /* TrackListViewModelTest.swift */; };
 		5686A434B5FF1A6FC08548D5 /* Pods_iTunesSearchSwiftUIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		4F9C41AA23CA6D62005DEB98 /* TrackListModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackListModelTest.swift; sourceTree = "<group>"; };
 		4F9C41AD23CA6E34005DEB98 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4F9C41B123CA6E76005DEB98 /* Inject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		4F9C41BC23CA9CB2005DEB98 /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
+		4F9C41BE23CA9CDB005DEB98 /* TrackListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModelTest.swift; sourceTree = "<group>"; };
 		6F1C79D0D766D554FEA748CF /* Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKitUITests/Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A027157880F0860A2E6A3D81 /* Pods-iTunesSearchSwiftUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKit/Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchSwiftUIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +149,7 @@
 				4F9C419C23CA6471005DEB98 /* extensions */,
 				4F9C419623CA5EC4005DEB98 /* Model */,
 				4F9C419023CA5B12005DEB98 /* Views */,
+				4F9C41BA23CA9AF6005DEB98 /* ViewModel */,
 				4F9C415D23CA46B1005DEB98 /* AppDelegate.swift */,
 				4F9C415F23CA46B1005DEB98 /* SceneDelegate.swift */,
 				4F9C416923CA46B2005DEB98 /* Assets.xcassets */,
@@ -158,6 +163,7 @@
 		4F9C417623CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				4F9C41BB23CA9C2B005DEB98 /* ViewModel */,
 				4F9C41A923CA6D43005DEB98 /* Model */,
 				4F9C419323CA5C13005DEB98 /* Views */,
 				4F9C417723CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests.swift */,
@@ -251,6 +257,22 @@
 				4F9C41AD23CA6E34005DEB98 /* Constants.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		4F9C41BA23CA9AF6005DEB98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F9C41BC23CA9CB2005DEB98 /* TrackListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4F9C41BB23CA9C2B005DEB98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F9C41BE23CA9CDB005DEB98 /* TrackListViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9C5910B0E95D58A210EE7800 /* Frameworks */ = {
@@ -551,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9C41BD23CA9CB2005DEB98 /* TrackListViewModel.swift in Sources */,
 				4F9C41A423CA6743005DEB98 /* TrackApi.swift in Sources */,
 				4F9C41A823CA69DA005DEB98 /* Track.swift in Sources */,
 				4F9C41A223CA672A005DEB98 /* Fetch.swift in Sources */,
@@ -571,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9C41BF23CA9CDB005DEB98 /* TrackListViewModelTest.swift in Sources */,
 				4F9C419523CA5C33005DEB98 /* TrackSearchViewControllerTest.swift in Sources */,
 				4F9C41AB23CA6D62005DEB98 /* TrackListModelTest.swift in Sources */,
 				4F9C417823CA46B3005DEB98 /* iTunesSearchSwiftUIKitTests.swift in Sources */,
