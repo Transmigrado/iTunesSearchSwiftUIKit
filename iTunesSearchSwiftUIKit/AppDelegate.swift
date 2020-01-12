@@ -8,10 +8,15 @@
 
 import UIKit
 import CoreData
+import ReSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let mainStore = Store<AppState>(
+        reducer: trackReducer,
+        state: nil
+    )
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
