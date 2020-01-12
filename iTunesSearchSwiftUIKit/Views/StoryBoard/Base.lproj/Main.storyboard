@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="385.71428571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Track Detail View Controller-->
         <scene sceneID="Jcy-Q1-4uk">
             <objects>
-                <viewController id="4fz-q5-1eK" sceneMemberID="viewController">
+                <viewController id="4fz-q5-1eK" customClass="TrackDetailViewController" customModule="iTunesSearchSwiftUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z30-YT-heu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tsd-G9-YBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="386"/>
+            <point key="canvasLocation" x="1952" y="386"/>
         </scene>
     </scenes>
 </document>

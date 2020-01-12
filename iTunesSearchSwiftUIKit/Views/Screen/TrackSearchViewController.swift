@@ -13,7 +13,6 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
 
     typealias StoreSubscriberStateType = AppState
     var model: TrackListModel?
-    // MARK: -lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         bindModel()
@@ -27,7 +26,6 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
                             self.tableView!.reloadData()
                         }
     }
-    // MARK: -Redux
     func newState(state: AppState) {
         debugPrint(state.track)
     }
