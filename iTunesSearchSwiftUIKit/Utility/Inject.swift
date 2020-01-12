@@ -11,6 +11,7 @@ import Swinject
 
 enum InjectName: String {
     case trackListModel
+    case trackSearchVC
 }
 
 extension Container {

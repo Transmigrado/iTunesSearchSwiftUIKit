@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import Combine
+
 
 class TrackListModel: ListModel {
 
-    var tracks: [Track] = []
+    @Published var tracks: [Track] = []
     var page = 0
     var searchText = "" {
         didSet {

@@ -20,12 +20,28 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="idt-8D-zgj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackCell" rowHeight="75" id="idt-8D-zgj">
                                 <rect key="frame" x="0.0" y="72" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="idt-8D-zgj" id="E2A-eD-B8x">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVe-62-hZV">
+                                            <rect key="frame" x="20" y="27" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="Iri-pB-nD7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qVe-62-hZV" firstAttribute="leading" secondItem="E2A-eD-B8x" secondAttribute="leadingMargin" id="93S-qb-Mr7"/>
+                                        <constraint firstItem="qVe-62-hZV" firstAttribute="top" secondItem="E2A-eD-B8x" secondAttribute="topMargin" constant="16" id="bi5-eb-F7Q"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="qVe-62-hZV" secondAttribute="bottom" constant="16" id="tGD-Jh-3mV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
