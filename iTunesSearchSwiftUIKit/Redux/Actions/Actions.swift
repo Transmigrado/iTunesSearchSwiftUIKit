@@ -1,5 +1,5 @@
 //
-//  state.swift
+//  Actions.swift
 //  iTunesSearchSwiftUIKit
 //
 //  Created by Jorge Acosta on 12-01-20.
@@ -8,6 +8,4 @@
 
 import ReSwift
 
-struct AppState: StateType {
-    var track = Track()
-}
+struct SelectTrack: Action {}

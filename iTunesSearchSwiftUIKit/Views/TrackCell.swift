@@ -23,12 +23,10 @@ class TrackCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func configure(withTrack track: Track) {
-      
         self.title?.text = track.trackName
         self.subtitle?.text = track.artistName
         Nuke.loadImage(with: URL(string: track.artworkUrl100)!, into: trackImage!)
     }
-
 }

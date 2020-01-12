@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import ReSwift
 
-class TrackSearchViewController: UITableViewController {
+class TrackSearchViewController: UITableViewController, StoreSubscriber {
+
+    typealias StoreSubscriberStateType = AppState
     var model: TrackListModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         bindModel()
+        mainStore.subscribe(self)
+
         model?.searchText = "Coldplay"
     }
     func bindModel() {
         model?.$tracks.receive(on: DispatchQueue.main)
-                        .sink { tracks in
+                        .sink { _ in
                             self.tableView!.reloadData()
                         }
+    }
+
+    func newState(state: AppState) {
+        
     }
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,5 +42,8 @@ class TrackSearchViewController: UITableViewController {
         let item = self.model?.tracks[indexPath.row]
         cell.configure(withTrack: item!)
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
