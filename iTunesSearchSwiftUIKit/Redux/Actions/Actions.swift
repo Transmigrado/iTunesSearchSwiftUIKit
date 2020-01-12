@@ -8,4 +8,6 @@
 
 import ReSwift
 
-struct SelectTrack: Action {}
+struct SelectTrack: Action {
+    let track: Track?
+}

@@ -13,6 +13,7 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
 
     typealias StoreSubscriberStateType = AppState
     var model: TrackListModel?
+    // MARK: -lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         bindModel()
@@ -26,9 +27,9 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
                             self.tableView!.reloadData()
                         }
     }
-
+    // MARK: -Redux
     func newState(state: AppState) {
-        
+        debugPrint(state.track)
     }
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,6 +45,7 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let item = self.model?.tracks[indexPath.row]
+        mainStore.dispatch(SelectTrack(track: item))
     }
 }

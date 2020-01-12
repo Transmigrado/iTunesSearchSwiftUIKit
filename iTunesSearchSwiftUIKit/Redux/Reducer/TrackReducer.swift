@@ -10,9 +10,14 @@ import ReSwift
 
 func trackReducer(action: Action, state: AppState?) -> AppState {
 
-    guard let state = state else {
+    guard var state = state else {
         return AppState()
     }
-
+    switch action {
+    case let action as SelectTrack:
+        state.track = action.track!
+    default:break
+    }
+  
     return state
 }
