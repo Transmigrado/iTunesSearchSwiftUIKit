@@ -12,18 +12,13 @@ class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureSize()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configureSize() {
+        let height = 69.0
+        let width = Double(self.view.frame.size.width)
+        let positionY = Double(UIScreen.main.bounds.height) - height
+        self.view.frame = CGRect(x: 0.0, y: positionY, width: width, height: height)
     }
-    */
 
 }

@@ -8,11 +8,13 @@
 
 import UIKit
 import ReSwift
+import Swinject
 
 class TrackSearchViewController: UITableViewController, StoreSubscriber {
 
     typealias StoreSubscriberStateType = AppState
     var model: TrackListModel?
+    var container: Container?
     override func viewDidLoad() {
         super.viewDidLoad()
         bindModel()
@@ -32,7 +34,6 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
                         }
     }
     func newState(state: AppState) {
-        debugPrint(state.track)
     }
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {

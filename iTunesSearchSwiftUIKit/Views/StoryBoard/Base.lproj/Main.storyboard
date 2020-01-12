@@ -60,17 +60,30 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHw-e4-fQl">
+                                            <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="HeC-d5-wMv"/>
+                                                <constraint firstAttribute="height" constant="64" id="LSq-M9-eKj"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="togglePlayWithSender:" destination="rYn-mD-XxX" eventType="touchUpInside" id="vP0-zn-ZPO"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="kHw-e4-fQl" firstAttribute="top" secondItem="kqF-Ju-8tr" secondAttribute="top" constant="8" id="4jO-Bv-6lb"/>
                                         <constraint firstItem="BoT-Vd-KAN" firstAttribute="leading" secondItem="DA8-N2-NHX" secondAttribute="trailing" constant="8" id="8ny-eK-6He"/>
                                         <constraint firstItem="BoT-Vd-KAN" firstAttribute="top" secondItem="kqF-Ju-8tr" secondAttribute="top" constant="8" id="BoE-AA-aWt"/>
                                         <constraint firstItem="7jt-wL-SRU" firstAttribute="leading" secondItem="DA8-N2-NHX" secondAttribute="trailing" constant="8" id="IAr-ZV-RCM"/>
                                         <constraint firstAttribute="trailing" secondItem="BoT-Vd-KAN" secondAttribute="trailing" constant="20" id="JlK-CX-Lie"/>
+                                        <constraint firstItem="kHw-e4-fQl" firstAttribute="leading" secondItem="kqF-Ju-8tr" secondAttribute="leading" constant="8" id="KUO-0X-NFg"/>
                                         <constraint firstItem="DA8-N2-NHX" firstAttribute="top" secondItem="kqF-Ju-8tr" secondAttribute="top" constant="8" id="VMj-EV-wQA"/>
                                         <constraint firstItem="DA8-N2-NHX" firstAttribute="leading" secondItem="kqF-Ju-8tr" secondAttribute="leading" constant="8" id="XAh-E5-5HA"/>
                                         <constraint firstAttribute="bottom" secondItem="DA8-N2-NHX" secondAttribute="bottom" constant="8" id="dlL-CP-zC4"/>
                                         <constraint firstItem="7jt-wL-SRU" firstAttribute="trailing" secondItem="kqF-Ju-8tr" secondAttribute="trailingMargin" id="nAN-HD-a76"/>
                                         <constraint firstItem="7jt-wL-SRU" firstAttribute="top" secondItem="BoT-Vd-KAN" secondAttribute="bottom" constant="1" id="rIa-98-jBf"/>
+                                        <constraint firstAttribute="bottom" secondItem="kHw-e4-fQl" secondAttribute="bottom" constant="8" id="rrL-Dw-Sn0"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

@@ -13,6 +13,7 @@ class TrackCell: UITableViewCell {
     @IBOutlet var trackImage: UIImageView?
     @IBOutlet var title: UILabel?
     @IBOutlet var subtitle: UILabel?
+    private var track: Track?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,5 +29,11 @@ class TrackCell: UITableViewCell {
         self.title?.text = track.trackName
         self.subtitle?.text = track.artistName
         Nuke.loadImage(with: URL(string: track.artworkUrl100)!, into: trackImage!)
+        self.track = track
+
+    }
+
+    @IBAction func togglePlay(sender: UIButton) {
+        mainStore.dispatch(PlayTrack(track: track))
     }
 }

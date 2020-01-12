@@ -11,3 +11,7 @@ import ReSwift
 struct SelectTrack: Action {
     let track: Track?
 }
+
+struct PlayTrack: Action {
+    let track: Track?
+}

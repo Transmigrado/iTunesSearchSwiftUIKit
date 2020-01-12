@@ -16,6 +16,8 @@ func trackReducer(action: Action, state: AppState?) -> AppState {
     switch action {
     case let action as SelectTrack:
         state.track = action.track!
+    case let action as PlayTrack:
+        state.playerTrack = action.track!
     default:break
     }
     return state

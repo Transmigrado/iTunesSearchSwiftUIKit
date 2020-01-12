@@ -8,9 +8,8 @@
 
 import UIKit
 import ReSwift
-class TrackDetailViewController: UIViewController, StoreSubscriber {
-    typealias StoreSubscriberStateType = AppState
 
+class TrackDetailViewController: UIViewController, StoreSubscriber {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
