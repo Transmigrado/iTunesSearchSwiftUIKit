@@ -22,6 +22,7 @@ target 'iTunesSearchSwiftUIKit' do
      pod 'Swinject', '2.6.2'
      pod 'SwinjectStoryboard'
      pod 'Nimble'
+      pod 'ReSwift'
   end
 
   target 'iTunesSearchSwiftUIKitUITests' do
@@ -36,6 +37,7 @@ target 'iTunesSearchSwiftUIKit' do
     pod 'lottie-ios'
     pod 'SwiftAudio', '~> 0.11.2'
     pod 'Nuke', '~> 8.0'
+     pod 'ReSwift'
   end
 
 end
