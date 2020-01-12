@@ -34,6 +34,7 @@ target 'iTunesSearchSwiftUIKit' do
     pod 'Nimble'
     pod 'lottie-ios'
     pod 'SwiftAudio', '~> 0.11.2'
+    pod 'Nuke', '~> 8.0'
   end
 
 end
