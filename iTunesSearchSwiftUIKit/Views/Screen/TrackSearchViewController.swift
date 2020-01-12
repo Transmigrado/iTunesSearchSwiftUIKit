@@ -16,9 +16,14 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindModel()
-        mainStore.subscribe(self)
-
         model?.searchText = "Coldplay"
+    }
+    override func viewWillAppear(_ animated: Bool) {
+       mainStore.subscribe(self)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+       mainStore.unsubscribe(self)
     }
     func bindModel() {
         model?.$tracks.receive(on: DispatchQueue.main)

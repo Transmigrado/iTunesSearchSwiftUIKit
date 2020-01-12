@@ -14,5 +14,8 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(TrackSearchViewController.self) { _, controller in
             controller.model =  defaultContainer.resolve(from: .trackListModel) as TrackListModel
         }
+        let storyboard = UIStoryboard(name: "Addons", bundle: nil)
+        let playerVC = (storyboard.instantiateViewController(withIdentifier: "PlayerView") as? PlayerViewController)!
+        defaultContainer.register(from: .playerVC, value: playerVC )
     }
 }

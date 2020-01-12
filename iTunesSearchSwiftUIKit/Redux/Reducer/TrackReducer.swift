@@ -18,6 +18,5 @@ func trackReducer(action: Action, state: AppState?) -> AppState {
         state.track = action.track!
     default:break
     }
-  
     return state
 }
