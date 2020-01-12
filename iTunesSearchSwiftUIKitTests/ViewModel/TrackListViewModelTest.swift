@@ -13,7 +13,7 @@ import Nimble
 import Swinject
 @testable import iTunesSearchSwiftUIKit
 
-class TrackListModelTest: QuickSpec {
+class TrackListViewModelTest: QuickSpec {
     
      override func spec() {
 
