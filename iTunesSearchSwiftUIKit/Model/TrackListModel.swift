@@ -9,7 +9,6 @@
 import Foundation
 import Combine
 
-
 class TrackListModel: ListModel {
 
     @Published var tracks: [Track] = []

@@ -11,7 +11,7 @@ import Nimble
 import Swinject
 @testable import iTunesSearchSwiftUIKit
 
-class TableOfContentsSpec: QuickSpec {
+class TrackSearchViewControllerTest: QuickSpec {
     
 
     struct MockTrackAPi: Fetch {
@@ -39,8 +39,13 @@ class TableOfContentsSpec: QuickSpec {
     var container: Container!
     beforeEach {
        container = Container()
-       container.register(from: .trackSearchVC, value: TrackSearchViewController())
        container.register(from: .trackListModel, value: TrackListModel(api: MockTrackAPi()))
+        
+        let vc = TrackSearchViewController()
+        vc.model = container.resolve(from: .trackListModel) as TrackListModel
+        
+        container.register(from: .trackSearchVC, value: vc )
+     
     }
     
     describe("Table DataSource") {

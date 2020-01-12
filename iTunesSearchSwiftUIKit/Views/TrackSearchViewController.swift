@@ -11,10 +11,15 @@ import UIKit
 class TrackSearchViewController: UITableViewController {
 
     var model: TrackListModel?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bindModel()
+    }
+    func bindModel() {
+        model?.$tracks.receive(on: DispatchQueue.main)
+                        .sink { tracks in
+                            self.tableView.reloadData()
+                        }
     }
 
     // MARK: - Table view data source
