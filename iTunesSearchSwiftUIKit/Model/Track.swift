@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Track: Identifiable, Decodable {
+struct Track: Hashable, Decodable {
 
     var id = UUID()
     var wrapperType = ""

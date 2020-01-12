@@ -10,7 +10,8 @@ target 'iTunesSearchSwiftUIKit' do
   pod 'lottie-ios'
   pod 'SwiftAudio', '~> 0.11.2'
   pod 'SwiftLint'
-
+  pod 'Nuke', '~> 8.0'
+    
   target 'iTunesSearchSwiftUIKitTests' do
     inherit! :search_paths
     # Pods for testing

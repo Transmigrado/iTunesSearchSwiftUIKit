@@ -52,7 +52,7 @@ class TrackSearchViewControllerTest: QuickSpec {
         it("change searchText and show correct number rows"){
             let vc: TrackSearchViewController = container.resolve(from: .trackSearchVC)
             vc.model?.searchText = "Coldplay"
-            expect(vc.tableView.numberOfRows(inSection: 0)).to(equal(1))
+            expect(vc.tableView!.numberOfRows(inSection: 0)).to(equal(1))
         }
     }
   }

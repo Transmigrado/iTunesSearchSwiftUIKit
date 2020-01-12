@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import Nuke
 
 class TrackCell: UITableViewCell {
-    
     @IBOutlet var trackImage: UIImageView?
     @IBOutlet var title: UILabel?
     @IBOutlet var subtitle: UILabel?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +22,13 @@ class TrackCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(withTrack track: Track) {
+      
+        self.title?.text = track.trackName
+        self.subtitle?.text = track.artistName
+        Nuke.loadImage(with: URL(string: track.artworkUrl100)!, into: trackImage!)
     }
 
 }
