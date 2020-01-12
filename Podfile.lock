@@ -4,6 +4,7 @@ PODS:
   - Nimble (8.0.5)
   - Nuke (8.4.0)
   - Quick (2.2.0)
+  - ReSwift (5.0.0)
   - SwiftAudio (0.11.2)
   - SwiftLint (0.38.0)
   - Swinject (2.6.2)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - Nimble
   - Nuke (~> 8.0)
   - Quick
+  - ReSwift
   - SwiftAudio (~> 0.11.2)
   - SwiftLint
   - Swinject (= 2.6.2)
@@ -28,6 +30,7 @@ SPEC REPOS:
     - Nimble
     - Nuke
     - Quick
+    - ReSwift
     - SwiftAudio
     - SwiftLint
     - Swinject
@@ -39,11 +42,12 @@ SPEC CHECKSUMS:
   Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   Nuke: fa6f784c4f7e1c0f9313668510186c68b7af2509
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
   SwiftAudio: 217f5f184b27a0e25ff0fe7647021f05a21c06c9
   SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 182054b5dacc4702ffa4ad6d672d4afc4b2fb09a
+PODFILE CHECKSUM: 06ffabb6fd0324d44503d4c6396b863dd1ecdc15
 
 COCOAPODS: 1.7.5

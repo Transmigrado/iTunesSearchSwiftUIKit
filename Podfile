@@ -11,6 +11,7 @@ target 'iTunesSearchSwiftUIKit' do
   pod 'SwiftAudio', '~> 0.11.2'
   pod 'SwiftLint'
   pod 'Nuke', '~> 8.0'
+  pod 'ReSwift'
     
   target 'iTunesSearchSwiftUIKitTests' do
     inherit! :search_paths
