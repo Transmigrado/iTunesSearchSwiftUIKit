@@ -11,8 +11,8 @@ import SwinjectStoryboard
 extension SwinjectStoryboard {
     @objc class func setup() {
         defaultContainer.register(from: .trackListModel, value: TrackListModel(api: TrackApi()))
-        defaultContainer.storyboardInitCompleted(TrackSearchViewController.self) { resolver, controller in
-            controller.model = resolver.resolve(TrackListModel.self)
+        defaultContainer.storyboardInitCompleted(TrackSearchViewController.self) { _, controller in
+            controller.model =  defaultContainer.resolve(from: .trackListModel) as TrackListModel
         }
     }
 }
