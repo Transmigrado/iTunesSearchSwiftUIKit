@@ -34,6 +34,5 @@ class TrackCell: UITableViewCell {
     }
 
     @IBAction func togglePlay(sender: UIButton) {
-        mainStore.dispatch(PlayTrack(track: track))
     }
 }

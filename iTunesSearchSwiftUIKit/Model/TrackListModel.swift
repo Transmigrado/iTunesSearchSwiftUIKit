@@ -28,6 +28,7 @@ class TrackListModel: ListModel {
     }
 
     private func retrieve(term: String) {
+        debugPrint("RETRIEVE")
         api.retrieve(urlString: "\(Constants.baseUrl)\(term)&offset=\(page * 20)") { response in
             self.tracks.append(contentsOf: response.results)
         }

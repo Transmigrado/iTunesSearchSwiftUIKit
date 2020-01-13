@@ -10,5 +10,4 @@ import ReSwift
 
 struct AppState: StateType {
     var track = Track()
-    var playerTrack: Track?
 }

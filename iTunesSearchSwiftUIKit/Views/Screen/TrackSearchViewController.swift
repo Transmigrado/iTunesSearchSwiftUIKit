@@ -10,15 +10,15 @@ import UIKit
 import ReSwift
 import Swinject
 
-class TrackSearchViewController: UITableViewController, StoreSubscriber {
+class TrackSearchViewController: UITableViewController, StoreSubscriber, UISearchBarDelegate {
 
-    typealias StoreSubscriberStateType = AppState
+    @IBOutlet var searchBar: UISearchBar?
     var model: TrackListModel?
     var container: Container?
     override func viewDidLoad() {
         super.viewDidLoad()
         bindModel()
-        model?.searchText = "Coldplay"
+        searchBar?.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
        mainStore.subscribe(self)
@@ -32,6 +32,13 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber {
                         .sink { _ in
                             self.tableView!.reloadData()
                         }
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.model?.searchText = searchText
+    }
+
+    private func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        self.model?.searchText = searchBar.text!
     }
     func newState(state: AppState) {
     }
