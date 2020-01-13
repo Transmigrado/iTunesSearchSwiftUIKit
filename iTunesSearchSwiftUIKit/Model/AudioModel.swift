@@ -13,13 +13,22 @@ import Combine
 class AudioModel: ObservableObject {
     @Published var progress: Float = 0.0
     var audioPlayer = AudioPlayer()
+    var audioItem: DefaultAudioItem?
     var audioUrl = "" {
         didSet {
-            let audioItem = DefaultAudioItem(audioUrl: audioUrl, sourceType: .stream)
-            do {
-                _ = try audioPlayer.load(item: audioItem, playWhenReady: true)
-            } catch let error {
-                debugPrint(error)
+        audioItem = DefaultAudioItem(audioUrl: audioUrl, sourceType: .stream)
+        }
+    }
+    @Published var playing = false {
+        didSet {
+            if playing {
+                do {
+                    _ = try audioPlayer.load(item: audioItem!, playWhenReady: true)
+                } catch let error {
+                    debugPrint(error)
+                }
+            } else {
+                audioPlayer.stop()
             }
         }
     }

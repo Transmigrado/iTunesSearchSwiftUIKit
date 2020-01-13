@@ -15,6 +15,7 @@ class TrackDetailViewController: UIViewController, StoreSubscriber {
     @IBOutlet var image: UIImageView?
     @IBOutlet var trackNameLabel: UILabel?
     @IBOutlet var artistNameLabel: UILabel?
+    @IBOutlet var toggleButton: UIButton?
     @IBOutlet var progress: UIProgressView?
     var audioModel: AudioModel?
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class TrackDetailViewController: UIViewController, StoreSubscriber {
 
     override func viewWillDisappear(_ animated: Bool) {
       mainStore.unsubscribe(self)
+      audioModel?.playing = false
     }
     func newState(state: AppState) {
         let track: Track = state.track
@@ -34,12 +36,21 @@ class TrackDetailViewController: UIViewController, StoreSubscriber {
         Nuke.loadImage(with: urlImage!, into: image!)
         artistNameLabel?.text = track.artistName
         trackNameLabel?.text = track.trackName
+        audioModel?.audioUrl = track.previewUrl
         _ = audioModel?.$progress
             .receive(on: DispatchQueue.main)
             .assign(to: \.progress, on: self.progress!)
+        _ = audioModel?.$playing
+            .receive(on: DispatchQueue.main)
+            .map({
+                ($0) ? "pause.circle.fill" : "play.circle.fill"
+            })
+            .sink(receiveValue: { image in
+                self.toggleButton?.setImage(UIImage(systemName: image), for: .normal)
+            })
     }
 
     @IBAction func togglePlay(sender: UIButton) {
-        audioModel?.audioUrl = mainStore.state.track.previewUrl
+        audioModel?.playing.toggle()
     }
 }

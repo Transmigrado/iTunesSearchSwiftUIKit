@@ -222,6 +222,7 @@
                         <outlet property="image" destination="jRg-Kw-ecb" id="8Kt-Tn-J99"/>
                         <outlet property="imagebackTrack" destination="07g-88-jGN" id="Sa1-Pa-Nj1"/>
                         <outlet property="progress" destination="SHJ-3v-pVM" id="tqa-2X-Hcw"/>
+                        <outlet property="toggleButton" destination="Rb0-IW-oUe" id="2Oo-eF-pBE"/>
                         <outlet property="trackNameLabel" destination="gf4-NI-sL3" id="Q9M-Zz-Mxz"/>
                     </connections>
                 </viewController>
