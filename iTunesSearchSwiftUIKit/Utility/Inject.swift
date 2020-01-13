@@ -13,6 +13,7 @@ enum InjectName: String {
     case trackListModel
     case trackSearchVC
     case playerVC
+    case playerModel
 }
 
 extension Container {

@@ -34,6 +34,12 @@ class TrackDetailViewController: UIViewController, StoreSubscriber {
         Nuke.loadImage(with: urlImage!, into: image!)
         artistNameLabel?.text = track.artistName
         trackNameLabel?.text = track.trackName
+        _ = audioModel?.$progress
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.progress, on: self.progress!)
     }
 
+    @IBAction func togglePlay(sender: UIButton) {
+        audioModel?.audioUrl = mainStore.state.track.previewUrl
+    }
 }

@@ -28,7 +28,7 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber, UISearc
        mainStore.unsubscribe(self)
     }
     func bindModel() {
-        model?.$tracks.receive(on: DispatchQueue.main)
+        _ = model?.$tracks.receive(on: DispatchQueue.main)
                         .sink { _ in
                             self.tableView!.reloadData()
                         }
