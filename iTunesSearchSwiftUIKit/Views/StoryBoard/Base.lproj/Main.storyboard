@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="240.57971014492756" y="385.71428571428572"/>
         </scene>
-        <!--Track Search View Controller-->
+        <!--Buscador iTunes -->
         <scene sceneID="yKn-uF-X2W">
             <objects>
                 <tableViewController id="qmS-Ug-63e" customClass="TrackSearchViewController" customModule="iTunesSearchSwiftUIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,7 +104,7 @@
                             <outlet property="delegate" destination="qmS-Ug-63e" id="vHX-ys-saN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0ud-2h-b48"/>
+                    <navigationItem key="navigationItem" title="Buscador iTunes " id="0ud-2h-b48"/>
                     <connections>
                         <outlet property="searchBar" destination="yNu-Po-xIz" id="eth-st-6dZ"/>
                     </connections>
@@ -159,11 +159,17 @@
                                     <constraint firstItem="cGH-NE-OPm" firstAttribute="top" secondItem="15q-au-jT1" secondAttribute="top" id="ipH-qV-ADM"/>
                                 </constraints>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SHJ-3v-pVM">
+                                <rect key="frame" x="0.0" y="256" width="414" height="2.5"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="15q-au-jT1" firstAttribute="leading" secondItem="EXV-7e-5Ea" secondAttribute="leading" id="1bW-am-dMu"/>
+                            <constraint firstItem="SHJ-3v-pVM" firstAttribute="leading" secondItem="Z30-YT-heu" secondAttribute="leading" id="R35-Q7-Lhe"/>
+                            <constraint firstAttribute="trailing" secondItem="SHJ-3v-pVM" secondAttribute="trailing" id="ZWs-Xw-EPs"/>
                             <constraint firstItem="15q-au-jT1" firstAttribute="trailing" secondItem="EXV-7e-5Ea" secondAttribute="trailing" id="e4V-7A-Kac"/>
+                            <constraint firstItem="SHJ-3v-pVM" firstAttribute="top" secondItem="15q-au-jT1" secondAttribute="bottom" id="gj9-fQ-9g2"/>
                             <constraint firstItem="15q-au-jT1" firstAttribute="top" secondItem="Z30-YT-heu" secondAttribute="top" id="x1W-3w-fN3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EXV-7e-5Ea"/>

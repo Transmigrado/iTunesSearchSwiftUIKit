@@ -12,7 +12,11 @@ import Combine
 class TrackListModel: ListModel {
 
     @Published var tracks: [Track] = []
-    var page = 0
+    var page = 0 {
+        didSet {
+            retrieve(term: searchText)
+        }
+    }
     var searchText = "" {
         didSet {
             page = 0

@@ -59,4 +59,10 @@ class TrackSearchViewController: UITableViewController, StoreSubscriber, UISearc
         let item = self.model?.tracks[indexPath.row]
         mainStore.dispatch(SelectTrack(track: item))
     }
+    override func tableView(_ tableView: UITableView,
+                            willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 >= (model?.tracks.count)! {
+            self.model?.page = self.model!.page + 1
+        }
+    }
 }
