@@ -13,6 +13,10 @@ import Nuke
 class TrackDetailViewController: UIViewController, StoreSubscriber {
     @IBOutlet var imagebackTrack: UIImageView?
     @IBOutlet var image: UIImageView?
+    @IBOutlet var trackNameLabel: UILabel?
+    @IBOutlet var artistNameLabel: UILabel?
+    @IBOutlet var progress: UIProgressView?
+    var audioModel: AudioModel?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,6 +32,8 @@ class TrackDetailViewController: UIViewController, StoreSubscriber {
         let urlImage = URL(string: track.artworkUrl100)
         Nuke.loadImage(with: urlImage!, into: imagebackTrack!)
         Nuke.loadImage(with: urlImage!, into: image!)
+        artistNameLabel?.text = track.artistName
+        trackNameLabel?.text = track.trackName
     }
 
 }

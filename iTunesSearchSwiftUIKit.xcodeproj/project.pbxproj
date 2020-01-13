@@ -33,6 +33,7 @@
 		4F9C41C923CB76E6005DEB98 /* TrackReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41C823CB76E6005DEB98 /* TrackReducer.swift */; };
 		4F9C41CC23CB8BA5005DEB98 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41CB23CB8BA5005DEB98 /* Actions.swift */; };
 		4F9C41CE23CB9028005DEB98 /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41CD23CB9028005DEB98 /* TrackDetailViewController.swift */; };
+		4F9C41D823CC1E0B005DEB98 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C41D723CC1E0B005DEB98 /* AudioModel.swift */; };
 		5686A434B5FF1A6FC08548D5 /* Pods_iTunesSearchSwiftUIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		4F9C41C823CB76E6005DEB98 /* TrackReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackReducer.swift; sourceTree = "<group>"; };
 		4F9C41CB23CB8BA5005DEB98 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		4F9C41CD23CB9028005DEB98 /* TrackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
+		4F9C41D723CC1E0B005DEB98 /* AudioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		6F1C79D0D766D554FEA748CF /* Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKitUITests/Pods-iTunesSearchSwiftUIKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A027157880F0860A2E6A3D81 /* Pods-iTunesSearchSwiftUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchSwiftUIKit/Pods-iTunesSearchSwiftUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B961D4099276B532A234BF /* Pods_iTunesSearchSwiftUIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchSwiftUIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 			children = (
 				4F9C419923CA5F1F005DEB98 /* protocols */,
 				4F9C419723CA5F14005DEB98 /* TrackListModel.swift */,
+				4F9C41D723CC1E0B005DEB98 /* AudioModel.swift */,
 				4F9C41A623CA69DA005DEB98 /* Track.swift */,
 				4F9C41A523CA69DA005DEB98 /* Page.swift */,
 			);
@@ -625,6 +628,7 @@
 				4F9C41A223CA672A005DEB98 /* Fetch.swift in Sources */,
 				4F9C419823CA5F14005DEB98 /* TrackListModel.swift in Sources */,
 				4F9C41B223CA6E76005DEB98 /* Inject.swift in Sources */,
+				4F9C41D823CC1E0B005DEB98 /* AudioModel.swift in Sources */,
 				4F9C419223CA5BF8005DEB98 /* TrackSearchViewController.swift in Sources */,
 				4F9C41A723CA69DA005DEB98 /* Page.swift in Sources */,
 				4F9C41C323CAB7A1005DEB98 /* TrackCell.swift in Sources */,
